@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة نتائج الطلاب | University Results Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="window-container">
+        <!-- شريط العنوان المحاكي للنظام -->
+        <div class="window-header">
+            <div class="window-title">
+                <span class="icon">🎓</span> شهادة التقديرات والنتائج الدراسية
+            </div>
+            <div class="window-controls">
+                <span class="control-btn minimize">─</span>
+                <span class="control-btn maximize">🗖</span>
+                <span class="control-btn close">✕</span>
+            </div>
+        </div>
+
+        <!-- المحتوى الداخلي للبوابة -->
+        <div class="window-body">
+            
+            <!-- قسم عرض الصورة المطلوبة result.jpg -->
+            <div class="image-section">
+                <img src="result.jpg" alt="صورة النتيجة / الشعار" onerror="this.onerror=null; this.parentElement.innerHTML='<div class="img-placeholder">تنبيه: ضع الصورة باسم <strong>result.jpg</strong> في نفس المجلد لتظهر هنا</div>';">
+            </div>
+
+            <!-- جدول البيانات المستوحى من النظام -->
+            <div class="table-responsive">
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>كود المادة (Code)</th>
+                            <th>اسم المادة (Course Title)</th>
+                            <th>التقدير (Grade)</th>
+                            <th>الساعات (Credits)</th>
+                            <th>النقاط (Points)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="code">BUSGB101</td>
+                            <td class="title">Introduction to Management I</td>
+                            <td class="grade unknown">UNKNOWN</td>
+                            <td class="credits">3</td>
+                            <td class="points">0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="code">BUSGB102</td>
+                            <td class="title">Mathematics for Business & Economics</td>
+                            <td class="grade unknown">UNKNOWN</td>
+                            <td class="credits">3</td>
+                            <td class="points">0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="code">BUSGB103</td>
+                            <td class="title">Communications Skills</td>
+                            <td class="grade unknown">UNKNOWN</td>
+                            <td class="credits">3</td>
+                            <td class="points">0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="code">LANG101</td>
+                            <td class="title">English Language 101</td>
+                            <td class="grade unknown">UNKNOWN</td>
+                            <td class="credits">3</td>
+                            <td class="points">0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="code">SNS111</td>
+                            <td class="title">Strategy and National Security</td>
+                            <td class="grade unknown">UNKNOWN</td>
+                            <td class="credits">0</td>
+                            <td class="points">0.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ملخص المعدلات والأرقام كما في الصورة -->
+            <div class="summary-container">
+                <div class="summary-row gpa-cumulative">
+                    <span class="label">Cumulative GPA</span>
+                    <span class="value">2</span>
+                </div>
+                <div class="summary-row gpa-term">
+                    <span class="label">Last Term GPA</span>
+                    <span class="value">-1</span>
+                </div>
+                <div class="summary-row total-credits">
+                    <span class="label">Total Credits</span>
+                    <span class="value">0</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- شريط المهام السفلي المحاكي للصورة -->
+        <div class="system-taskbar">
+            <button class="start-btn">
+                <span class="flag-icon">🇪🇬</span> Start
+            </button>
+            <div class="taskbar-tabs">
+                <div class="taskbar-tab active">...شهادة الت</div>
+                <div class="taskbar-tab">...معلومات و</div>
+            </div>
+            <div class="taskbar-time">01:01 م</div>
+        </div>
+    </div>
+
+</body>
+</html>

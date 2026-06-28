@@ -1,0 +1,275 @@
+/* إعدادات الخطوط والتنسيق العام */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    direction: rtl;
+}
+
+/* حاوية النافذة الرئيسية لمحاكاة واجهة الجامعة */
+.window-container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border: 1px solid #717b86;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* شريط العنوان العلوي */
+.window-header {
+    background: linear-gradient(to bottom, #505966, #3a414c);
+    color: #ffffff;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #2d323b;
+}
+
+.window-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control-btn {
+    cursor: pointer;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.1);
+    transition: background 0.2s;
+}
+
+.control-btn:hover {
+    background-color: rgba(255,255,255,0.25);
+}
+
+.control-btn.close:hover {
+    background-color: #e81123;
+}
+
+/* جسم النافذة والمحتوى */
+.window-body {
+    padding: 25px;
+    background-color: #ffffff;
+    min-height: 400px;
+}
+
+/* قسم عرض الصورة */
+.image-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.img-placeholder {
+    background-color: #fff9db;
+    border: 1px dashed #f59f00;
+    color: #f08c00;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* جدول النتائج والتقديرات */
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left; /* المحتوى التعليمي للمواد بالإنجليزية */
+    direction: ltr;  /* عرض البيانات الأكاديمية من اليسار لليمين بشكل منظم */
+}
+
+/* لكي تتناسب ترويسة الجدول مع الاتجاه */
+html[dir="rtl"] .results-table th {
+    text-align: center;
+}
+.results-table th, .results-table td {
+    padding: 12px 15px;
+    border: 1px solid #c1c7cd;
+    font-size: 14px;
+}
+
+.results-table th {
+    background-color: #f1f3f5;
+    color: #495057;
+    font-weight: 700;
+    text-align: left;
+}
+
+.results-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.results-table td.code {
+    font-weight: 600;
+    color: #1a73e8;
+}
+
+.results-table td.title {
+    color: #212529;
+}
+
+.results-table td.grade.unknown {
+    color: #868e96;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+}
+
+.results-table td.credits, .results-table td.points {
+    text-align: center;
+    font-weight: 600;
+}
+
+/* صندوق ملخص المعدلات التراكمية مستوحى من الألوان الأصلية */
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* ألوان الصفوف بدقة بناءً على الصورة والمظهر الأكاديمي المطور */
+.gpa-cumulative {
+    background-color: #fff3bf; /* أصفر ملائم لـ Cumulative GPA = 2 */
+    color: #664d03;
+    border: 1px solid #ffe066;
+}
+
+.gpa-term {
+    background-color: #d3f9d8; /* أخضر فاتح ملائم لـ Last Term GPA = -1 */
+    color: #137333;
+    border: 1px solid #b2f2bb;
+}
+
+.total-credits {
+    background-color: #51cf66; /* أخضر داكن ملائم لـ Total Credits = 0 */
+    color: #ffffff;
+    border: 1px solid #40c057;
+}
+
+/* شريط المهام السفلي المحاكي للأنظمة القديمة بدقة عصرية */
+.system-taskbar {
+    background: linear-gradient(to bottom, #434a54, #2c3037);
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    border-top: 1px solid #1a1c20;
+    direction: ltr; /* لمحاكاة شكل شريط التشغيل من اليسار */
+}
+
+.start-btn {
+    background: linear-gradient(to bottom, #3b78e7, #1a56c5);
+    color: white;
+    border: 1px solid #14449e;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
+}
+
+.start-btn:hover {
+    background: linear-gradient(to bottom, #4c85ee, #2262dc);
+}
+
+.taskbar-tabs {
+    display: flex;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+.taskbar-tab {
+    background-color: #505a66;
+    color: #e9ecef;
+    padding: 4px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: 1px solid #3e4650;
+    cursor: pointer;
+    white-space: nowrap;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: rtl; /* لأن أسماء النوافذ بالأسفل عربية */
+}
+
+.taskbar-tab.active {
+    background-color: #1a1c20;
+    color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.taskbar-time {
+    color: #ced4da;
+    font-size: 12px;
+    padding-right: 5px;
+}
+
+/* متجاوب مع الشاشات الصغيرة */
+@media (max-width: 600px) {
+    .results-table th, .results-table td {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+    .summary-row {
+        font-size: 13px;
+        padding: 10px;
+    }
+    .system-taskbar {
+        display: none; /* إخفاء شريط المهام في الشاشات الصغيرة لراحة التصفح */
+    }
+}
